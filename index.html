@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="images/x-icon" href="images/fm_logo-1.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if lt IE 9]><script src=”http://html5shim.googlecode.com/svn/trunk/html5.js”></script><![end if]-->
+        <script src="javascript.js" defer></script>
+        <title>FibberMagees</title>
+    </head>
+
+    <body>
+        <a href="#skip-content" id="skipContent">Skip<br>Content</a>
+
+        <button id="clickme" onclick="toggleImage(); toggleMode();"><img src="images/light.png" id="image" alt="activate light and dark mode with these icons." width="75" height="75"></button>
+
+        <header>
+            <a href="index.html"><img src="images/fm_logo-1.png" alt="FibberMageesLogo" width="350" height="150"></a>
+                <nav>
+                    <h1>Main Navigation</h1>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">menu</a></li>
+                        <li><a href="#booking"><i class="fas fa-calendar-alt"></i> Book now</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+        </header>
+
+        <img src="images/daft-yank-960x300.jpg" alt="Main page image with a beer glass as the background." class="headerImage">
+
+        <section id="about">
+            <h2 class="tagline">Get ready for a night out!</h2>
+        </section>
+
+        <main>
+            <section class="possie">
+                <h2>The Irish Know How To Party!</h2>
+                <img src="images/Bar.jpg" alt="Barstool." width="500">
+                <p>Fibber Magees, the only truly authentic Irish pub and restaurant in 
+                    the east valley, has been in business since March 2003. Our mission 
+                    statement is simple, "To be the highest quality authentic Irish Pub in 
+                    the market, offering excellent standards of food, drink, guest service 
+                    and hospitality".Our owners and staff would like to thank everyone who has  supported us for over 22 years. 
+                    It is because of you the craic is  mighty.
+                    Fibbers is the perfect place to hold your next event or get-together. 
+                    Please call us or stop by for more information. We hope we will see you soon</p>
+            </section>
+
+            <section class="discount">
+                <h2>Its a game, Want to see if you'll win a discount?</h2>
+                <p>Choose a number to see if you land a discount to use in store!</p>
+            
+                <form class="guessingGame" id="guessingGame">
+                    <label for="userDisplay">Pick a number between 1 and 10.</label>
+                    <input type="text" name="numberInput" id="userDisplay" required>
+                    
+                    <div id="message"></div>
+                    
+                    <input type="submit" id="submitButton" value="See If You Won" onclick="randomNum()">
+                </form>
+            </section>
+
+            <section class="menu" id="menu">
+                <h2>The higlights of the day, enjoy</h2>
+                    <section class="section1">
+                        <h3>Hunter's Kill</h3>
+                        <img src="images/steak-and-potatoes.jpg" alt="an arial view of a plate of mashed potatoes and rare steak." width="450" height="450">
+                        <p>Savory 12 ounce steak cooked to order, smothered in garlic and onion in house specialty sauce. Something that is a poster child for a staple hunters meal that any hunter would love.</p>
+                    </section>
+
+                    <section class="section2">
+                        <h3>Burger</h3>
+                        <img src="images/Burger.jpg" alt="A warm cheeseburger with a side of fries and sea salt for flavoring." width="450" height="450">
+                        <p>A burger with perfect ratio of lean meat to fat ground beef with a slice of gouda cheese, bacon, pickles and many other addons you can choose from. Comes with a side of fries and your choice of dipping sauce.</p>
+                    </section>
+
+                    <section class="section3">
+                        <h3>Bear Spoils</h3>
+                        <img src="images/fishandchips.jpg" alt="A cod fish fillet breaded to a golden brown with a side of tartar sauce and peas and two slices of lemon for zest." width="450" height="450">
+                        <p>Cod fish breaded to a golden brown with a side of your choosing. Just like a bear who finally caught a Salmon swimming upstream, you'll know how it feels to have the spoils of a well made meal.</p>
+                    </section>
+
+                    <a href="#">Full Menu</a>
+            </section>
+
+            <section class="spurs">
+                <h2>Fibber Magees is the PROUD home of the Arizona Spurs!</h2>
+                <img src="images/AZSpursWhite-Small.png" alt="AZ spurs fan club logo and picture">
+                <p>Arizona Spurs Official Supporters’ Club welcomes you to the only place to join with Tottenham Hotspur 
+                    fans from across America and around the world in Arizona.
+                     We can’t wait to welcome you to our diverse group for events at our home venue and trips year-round as we support 
+                     the mighty Tottenham Hotspur in their quest for glory!</p>
+            </section>
+
+            
+        </main>
+
+             <!-- booking form with web storage -->
+             <section id="booking" class="booking">
+                <h2>Please Book Your Visit</h2>
+                <div class="booking-form">
+                    <form id="visitForm">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Name:</label>
+                            <input type="text" id="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                            <input type="email" id="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="date"><i class="fas fa-calendar"></i> Preferred Date:</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time"><i class="fas fa-clock"></i> Preferred Time:</label>
+                            <select id="time" required>
+                                <option value="">Select a time</option>
+                                <option value="morning">Morning (8AM - 11PM)</option>
+                                <option value="afternoon">Afternoon (1PM - 5PM)</option>
+                            </select>
+                        </div>
+                        <button type="submit"><i class="fas fa-check-circle"></i> Book Now</button>
+                    </form>
+                </div>
+            </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions as a customer? You can contact us anytime and we'll get back to you within 24-48 hours.</p>
+
+            <form id="fullForm" novalidate>
+                <label for="fullName">Full Name<span>*</span></label>
+                <input type="text" id="fullName" name="fullName" required>
+                <div id="fullNameError" class="error"></div>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone">
+                <div id="phoneError" class="error"></div>
+
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="email">
+                <div id="emailError" class="error"></div>
+
+                <fieldset>
+                    <legend>Preferred Method of Contact</legend>
+                    <input type="radio" id="selectedPhone" name="preferredMethod" required>
+                    <label for="selectedPhone">Phone</label>
+
+                    <input type="radio" id="selectedEmail" name="preferredMethod" required>
+                    <label for="selectedEmail">Email</label>
+                </fieldset>
+
+                <label for="comments">Comments<span>*</span></label>
+                <input type="text" id="comments" required>
+                <div id="commentsError" class="error"></div>
+
+                <div id="errorList"></div>
+
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </section>
+        
+        <footer>
+            <small>Copyright &copy; 2025 - Fibber Magees</small>
+            <p>This site is for entertainment and educational purposes only.</p>
+
+            <section class="address">
+                <h4>Address</h4>
+                <p>
+                    11989 West Elliot Road<br>
+                    Chandler, AZ 85224
+                </p>
+            </section>
+
+            <section class="hours">
+                <h4>Hours</h4>
+                <p>
+                    Monday - Friday: 6pm-2am<br>
+                    Saturday: 5pm-3am<br>
+                    Sunday: CLOSED
+                </p>
+            </section>
+        </footer>
+          <!-- scripts loaded with defer attribute -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
+    </body>
+</html>
