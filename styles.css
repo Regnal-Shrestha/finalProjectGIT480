@@ -602,10 +602,8 @@ footer .hours p {
 /* Light/Dark Mode icon */
 #clickme, #image {
     position: absolute;
-    /* right: 75px;
-    top: 30px; */
-    right: 20px;
-    top: 20px;
+    right: 75px;
+    top: 30px;
 }
 
 #clickme {
@@ -1118,6 +1116,7 @@ body.light-mode .contact span, body.light-mode #errorList {
         margin-right: 8px;
     }
 
+
     /* responsive Design for Booking Form */
     @media screen and (max-width: 768px) {
         .booking {
@@ -1428,4 +1427,5 @@ body.light-mode .contact span, body.light-mode #errorList {
             display: flex;
             width: 20vw;
         }
+    
 }
