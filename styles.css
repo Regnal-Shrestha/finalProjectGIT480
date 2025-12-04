@@ -1155,6 +1155,10 @@ body.light-mode .contact span, body.light-mode #errorList {
             height: auto;
           } */
           
+        /* hide the regular nav links on mobile  change3*/ 
+        .nav-links:not(.active) {
+            display: none;
+        }
 
         /* specific styling for select on mobile */
         select {
