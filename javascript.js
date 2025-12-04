@@ -200,7 +200,7 @@ if (bookingForm) {
                     booking_date: formData.date,
                     booking_time: formData.time,
                     reply_to: "rshrest8@asu.edu",
-                    from_name: "fibberMages"
+                    from_name: "fibberMagees"
                 }
             );
             
