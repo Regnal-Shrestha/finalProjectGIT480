@@ -7,6 +7,13 @@
 /* Nunito - font-family: 'Nunito', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 :root {
     --background-color: black;
     --width: 1280px;
@@ -1038,7 +1045,10 @@ body.light-mode .contact span, body.light-mode #errorList {
     }
 
     .booking-form {
-        max-width: 600px;
+        max-width: 600px; 
+        /* max-width: 100%;
+        width: 100%; */
+
         margin: 0 auto;
         background-color: rgba(255, 255, 255, 0.9);
         padding: 2.5rem;
@@ -1140,6 +1150,12 @@ body.light-mode .contact span, body.light-mode #errorList {
             min-height: 3.2rem;
         }
 
+        /* img { change2
+            max-width: 100%;
+            height: auto;
+          } */
+          
+
         /* specific styling for select on mobile */
         select {
             background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
@@ -1184,7 +1200,7 @@ body.light-mode .contact span, body.light-mode #errorList {
     .error-message {
         background-color: rgba(255, 99, 71, 0.1);
         border: 2px solid rgb(96, 202, 54);
-        color: tomato;
+        color: var(--primary-color);
         padding: 1rem;
         border-radius: 10px;
         margin: 1rem 0;
