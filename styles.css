@@ -602,8 +602,10 @@ footer .hours p {
 /* Light/Dark Mode icon */
 #clickme, #image {
     position: absolute;
-    right: 75px;
-    top: 30px;
+    /* right: 75px;
+    top: 30px; */
+    right: 20px;
+    top: 20px;
 }
 
 #clickme {
